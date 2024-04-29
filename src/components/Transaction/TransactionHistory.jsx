@@ -10,11 +10,11 @@ export default function TransactionHistory({ transactions }) {
           <th className={css.th}>Currency</th>
         </tr>
       </thead>
-      {transactions.map((transaction) => (
-        <tbody className={css.tbody} key={transaction.id}>
-          <Transaction transactions={transaction} />
-        </tbody>
-      ))}
+      <tbody className={css.tbody}>
+        {transactions.map((transaction) => (
+          <Transaction transactions={transaction} key={transaction.id} />
+        ))}
+      </tbody>
     </table>
   );
 }
